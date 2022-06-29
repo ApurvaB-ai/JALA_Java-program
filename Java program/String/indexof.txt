@@ -1,0 +1,8 @@
+public class Demo {
+   public static void main(String []args) {
+      String str = "testdemo";
+      System.out.println("String: "+str);
+      int index = str.indexOf( 'd' );
+      System.out.printf("'d' is at index %d\n", index);
+   }
+}

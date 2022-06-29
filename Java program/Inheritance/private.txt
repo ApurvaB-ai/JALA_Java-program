@@ -1,0 +1,44 @@
+/ Java program to call
+// private method of a
+// class from another class
+  
+import Java.lang.reflect.Method;
+  
+// The class containing
+// a private method and
+// a public method
+class Check {
+  
+    // Private method
+    private void private_Method()
+    {
+        System.out.println("Private Method "
+                           + "called from outside");
+    }
+  
+    // Public method
+    public void printData()
+    {
+        System.out.println("Public Method");
+    }
+}
+  
+// Driver code
+class GFG {
+  
+    public static void main(String[] args)
+        throws Exception
+    {
+        Check c = new Check();
+  
+        // Using getDeclareMethod() method
+        Method m = Check.class
+                       .getDeclaredMethod("private_Method");
+  
+        // Using setAccessible() method
+        m.setAccessible(true);
+  
+        // Using invoke() method
+        m.invoke(c);
+    }
+}

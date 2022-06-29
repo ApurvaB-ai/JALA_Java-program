@@ -1,0 +1,26 @@
+public class Main {
+
+    private String instanceField = "Joe";
+
+    private void instanceMethod() {
+        System.out.println("Instance name=" + instanceField);
+    }
+
+    public static void main(String[] args) {
+
+        // cannot change instance field without an instance
+        instanceField = "Indy"; // compilation error
+
+        // cannot call an instance method without an instance
+        instanceMethod(); // compilation error
+
+        // create an instance
+        Main instance = new Main();
+
+        // change instance field
+        instance.instanceField = "Sydney";
+
+        // call instance method
+        instance.instanceMethod();  
+    }
+}

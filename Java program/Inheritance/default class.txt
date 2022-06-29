@@ -1,0 +1,27 @@
+public class A {
+
+    private int ii = 23;
+
+}
+
+public class B extends A {
+
+    private void readPrivateSuperClassField() throws Exception {
+        Class<?> clazz = getClass().getSuperclass();
+        Field field = clazz.getDeclaredField("ii");
+        field.setAccessible(true);
+        System.out.println(field.getInt(this));
+    }
+
+    public static void main(String[] args) throws Exception {
+        new B().readPrivateSuperClassField();
+    }
+
+}
+
+....
+//save by A.java  
+package pack;  
+class A{  
+  void msg(){System.out.println("Hello");}  
+}  

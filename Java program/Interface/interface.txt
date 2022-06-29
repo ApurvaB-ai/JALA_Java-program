@@ -1,0 +1,10 @@
+interface MyInterface{public class Tester {
+   // DEPARTMENT is a static constant
+   public static final String DEPARTMENT = "Development ";
+
+   public static void main(String args[]) {
+
+      String salary = "1000";
+      System.out.println(DEPARTMENT + "average salary:" + salary);
+   }
+}

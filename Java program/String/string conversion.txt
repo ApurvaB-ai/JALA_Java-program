@@ -1,0 +1,17 @@
+/ Java Program to Illustrate Integer to String Conversions
+// Using valueOf() Method of String class
+ 
+// Main class
+class GFG {
+   
+    // Main driver method
+    public static void main(String args[])
+    {
+        // Passing input integer as in argument and
+        // storing it in a string
+        String str3 = String.valueOf(1234);
+ 
+        // Printing the integer stored in above string
+        System.out.println("String str3 = " + str3);
+    }
+}
